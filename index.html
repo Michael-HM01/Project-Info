@@ -859,15 +859,37 @@ nav button.completed::after {
   
     <div id="references" class="content">
       <h2><i class="fas fa-book"></i> References & Resources</h2>
-      <ul>
-        <li><a href="https://www.oshc.dole.gov.ph/" target="_blank">DOLE - OSHC Official Site</a></li>
-        <li><a href="resources/BOSH CHEMICAL SAFETY-1.pdf" download> Download Chemical safety (PDF)</a></li>
-        <li><a href="resources/R.A 11058 SAFETY AND HEALTH.pdf" download> Download 
-        R.A 2011058 Safety Health (PDF) </a></li>
-        <li><a href="resources/BOSH 08112025.pdf" download> Download Machine Safety (PDF)</a></li>
-         <li><a href="resources/GOOD HOUSEKEEPING IS SAFETY.pptx" download> Download Good housekeeping (PPTX)</a></li>
-      </ul>
-    </div>
+      <button class="hazard-btn" onclick="toggleSection('OSHC')"><i class="fas fa-building"></i> Dole-OSHC Official Site</button>
+  <div id="OSHC" class="hazard-info">
+   <ul>
+        <li><a href="https://www.oshc.dole.gov.ph/" target="_blank"> Visit site</a></li>
+   <ul>
+  </div>
+  <button class="hazard-btn" onclick="toggleSection('Csafety')"><i class="fas fa-flask"></i> Download Chemical Safety(PDF)</button>
+  <div id="Csafety" class="hazard-info">
+   <ul>
+        <li><a href="resources/BOSH CHEMICAL SAFETY-1.pdf" download> Download (PDF)</a></li>
+   <ul>
+  </div>
+    <button class="hazard-btn" onclick="toggleSection('RA')"><i class="fas fa-gavel"></i> Download R.A 11058 Safety and Health (PDF)</button>
+  <div id="RA" class="hazard-info">
+   <ul>
+        <li><a href="resources/R.A 11058 SAFETY AND HEALTH.pdf" download> Download (PDF) </a></li>
+   <ul>
+  </div>
+      <button class="hazard-btn" onclick="toggleSection('Ms')"><i class="fas fa-cogs"></i> Download Machine Safety (PDF)</button>
+  <div id="Ms" class="hazard-info">
+   <ul>
+        <li><a href="resources/BOSH 08112025.pdf" download> Download (PDF) </a></li>
+   <ul>
+  </div>
+    <button class="hazard-btn" onclick="toggleSection('Good')"><i class="fas fa-broom"></i> Download Good Houskeeping (PPTX)</button>
+  <div id="Good" class="hazard-info">
+   <ul>
+        <li><a href="resources/GOOD HOUSEKEEPING IS SAFETY.pptx" download> Download (PPTX) </a></li>
+   <ul>
+  </div>
+ </div>
 
 </main>
 
