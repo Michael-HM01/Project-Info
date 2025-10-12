@@ -418,6 +418,45 @@ nav button.completed::after {
   margin-left: 8px;
   color: #4caf50;
 }
+   /* Back Button styled like nav buttons */
+.btn-nav-back {
+  background-color: #2e7d32;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.btn-nav-back:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Active (clicked) style — optional, for visual feedback */
+.btn-nav-back:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: icon spacing */
+.btn-nav-back i {
+  margin-right: 8px;
+}
+
+/* Optional: if you want it to stand out slightly as a 'Back' button */
+.btn-nav-back.back-highlight {
+  background-color: #4db6ac;
+  color: #004d40;
+  font-weight: 600;
+}
 
 </style>
 </head>
@@ -439,7 +478,10 @@ nav button.completed::after {
 
      <button onclick="showContent('activity', this)" data-topic="activity">Activity Center</button>
      <button onclick="showContent('references', this)" data-topic="references">References</button>
-    <button onclick="showContent('contact', this)" data-topic="contact">Contact</button>
+    <button onclick="showContent('Credits', this)" data-topic="contact">Credits</button>
+     <a href="../index.html" class="btn-nav-back">
+      <i class="fas fa-arrow-left"></i> Back to Homepage
+     </a>
   </nav>
 
   <main>
@@ -846,12 +888,15 @@ nav button.completed::after {
 </div>
 </div>
 
-    <!-- CONTACT -->
-    <div id="contact" class="content">
-      <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+    <!-- CREDITS -->
+    <div id="Credits" class="content">
+      <h2><i class="fas fa-envelope"></i> About This</h2>
+      <p>
+      This project is developed as a output for BOSH under ENGR. Arriola. This website aims to help students understand topics under BOSH like its overview, core concepts and more. 
+      </p>
       <p>📧 Email: <a href="mailto:michaelmillares7@gmail.com">michaelmillares7@gmail.com</a></p>
       <p>📍 Section: BSIE-31A1</p>
-      <p><strong>Owner:</strong> Michael Harold G. Millares</p>
+      <p><strong>Developed by:</strong> Michael Harold G. Millares</p>
       <p>Submitted for BOSH under
       <br> Engr. Arriola</p>
     </div>
