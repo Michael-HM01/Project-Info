@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Environmental Engineering — Full</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;word-wrap:break-word}
+    body{font-family:'Poppins',sans-serif;background:linear-gradient(135deg,#e0f7fa,#b2ebf2);color:#004d40;line-height:1.7;min-height:100vh}
+    header{background:linear-gradient(135deg,#00695c,#004d40);color:#fff;text-align:center;padding:48px 20px 60px;border-bottom-left-radius:20px;border-bottom-right-radius:20px;position:relative;box-shadow:0 4px 10px rgba(0,0,0,.15)}
+    .logo{position:absolute;left:18px;top:14px;width:54px;height:54px;border-radius:50%;object-fit:cover;border:2px solid #80deea;box-shadow:0 2px 5px rgba(0,0,0,.25)}
+    header h1{font-size:2.2rem;font-weight:700;text-shadow:0 2px 4px rgba(0,0,0,.25)}
+    nav{margin-top:18px;display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+    nav button, .btn-nav-back{background:#009688;color:#fff;border:0;padding:10px 18px;border-radius:22px;font-weight:500;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.12);transition:all .18s ease}
+    nav button:hover,.btn-nav-back:hover{transform:translateY(-2px);background:#26a69a}
+    nav button.active-btn{background:#4db6ac;color:#004d40;font-weight:600}
+    main{width:92%;max-width:1100px;background:#fff;margin:34px auto;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.06);padding:34px}
+    .content{display:none;animation:fadeIn .45s ease}
+    .content.active{display:block}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .E-btn{display:flex;align-items:center;justify-content:space-between;width:100%;background:#00796b;color:#fff;border:0;padding:12px 14px;margin-top:12px;border-radius:8px;font-weight:600;cursor:pointer;transition:all .18s ease;box-shadow:0 4px 10px rgba(0,0,0,.06)}
+    .E-btn:hover{transform:translateY(-2px);background:#009688}
+    .E-btn i.chev{transition:transform .25s ease;opacity:.95}
+    .E-btn.open i.chev{transform:rotate(90deg)}
+    .E-info{max-height:0;overflow:hidden;background:#f0fdfa;border-radius:8px;padding:0 12px;margin-top:10px;transition:max-height .35s ease,padding .25s ease}
+    .E-info.open{padding:12px;overflow:visible}
+    .nested{margin-left:14px;margin-top:8px}
+    h2{color:#00796b;border-bottom:3px solid #4db6ac;display:inline-block;margin-bottom:14px;padding-bottom:6px;font-weight:700}
+    p{margin-bottom:14px;color:#004d40}
+    strong{font-weight:700}
+    footer{background:#004d40;color:#e0f7fa;text-align:center;padding:12px;border-top-left-radius:12px;border-top-right-radius:12px;margin-top:18px}
+    .small{font-size:.95rem;color:#0b443f}
+    @media (max-width:700px){header h1{font-size:1.6rem}.logo{width:44px;height:44px}main{padding:20px}nav button{padding:10px 14px}}
+    .download-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #00796b;
+  font-weight: 600;
+  text-decoration: none;
+}
+.download-link:hover {
+  text-decoration: underline;
+  color: #004d40;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="https://raw.githubusercontent.com/Michael-HM01/BOSH-Info/refs/heads/main/images/Logo.jpg" alt="Logo">
+    <h1>Environmental Engineering</h1>
+    <nav>
+      <button onclick="showContent('Home',this)" class="active-btn">🏠 Home</button>
+      <button onclick="showContent('Intro',this)">🌱 Intro</button>
+      <button onclick="showContent('Main',this)">🏭 Main Info</button>
+      <button onclick="showContent('Credits',this)">🧾 Credits</button>
+      <button onclick="showContent('References',this)">📚 References</button>
+      <a href="../index.html" class="btn-nav-back">◀ Back</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="Home" class="content active">
+      <h2>Welcome to Environmental Engineering</h2>
+      <p class="small">Explore how science, technology and systems thinking combine to protect ecosystems and human health. This site provides concise explanations and deeper dives into laws, cycles, and environmental concepts.</p>
+    </section>
+
+    <section id="Intro" class="content">
+      <h2>Introduction</h2>
+      <p><strong>Environmental Engineering</strong> applies principles of chemistry, biology and engineering to prevent pollution, treat waste, and design sustainable systems. Practitioners aim to protect public health, conserve resources and restore ecosystems.</p>
+    </section>
+
+    <section id="Main" class="content">
+      <h2>🏭 Main Information on Environmental Engineering</h2>
+      <p class="small"><strong>Core Areas:</strong> Water & wastewater management, solid waste control, air quality, remediation, and renewable energy systems.</p>
+
+      <!-- R.A. 9003 -->
+      <button class="E-btn" onclick="toggleSection(this)">♻️ R.A. 9003 <i class="fas chev">›</i></button>
+      <div class="E-info">
+        <h3 style="margin-bottom:8px"><strong>Summary</strong></h3>
+        <p><strong>R.A. 9003</strong>, the <strong>Ecological Solid Waste Management Act of 2000</strong>, establishes a comprehensive and systematic approach to solid waste management focused on reduction, segregation, recycling and proper disposal.</p>
+        <div class="nested">
+          <button class="E-btn" onclick="toggleSection(this)">🔎 Purpose & Objectives <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Purpose:</strong> To adopt a systematic, comprehensive and ecological approach to solid waste management that ensures protection of public health and the environment.</p>
+            <p><strong>Key objectives:</strong> <strong>reduce</strong> waste generation, <strong>promote reuse and recycling</strong>, establish segregation at source, &amp; develop sustainable landfill practices.</p>
+          </div>
+
+          <button class="E-btn" onclick="toggleSection(this)">🛠️ Implementation & Responsibilities <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Local Government Units (LGUs)</strong> are primarily responsible for implementing R.A. 9003 at the barangay, municipal and city levels. They must develop <strong>Solid Waste Management Boards</strong>, create facilities for collection, recycling and disposal, and enforce segregation.</p>
+            <p><strong>Responsibilities include:</strong> creating disposal plans, providing collection services, and establishing material recovery facilities (MRFs).</p>
+          </div>
+
+          <button class="E-btn" onclick="toggleSection(this)">🚫 Prohibited Acts & Penalties <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Prohibited acts</strong> under R.A. 9003 include open dumping, littering, and burning of solid waste in public spaces. The law prescribes fines and possible imprisonment depending on the severity and repetition of violations.</p>
+            <p><strong>Enforcement</strong> is carried out by LGUs and environmental agencies; penalties aim to deter non-compliance and promote behavioral change toward sustainable waste handling.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Biocycle -->
+      <button class="E-btn" onclick="toggleSection(this)">🌿 Biocycle <i class="fas chev">›</i></button>
+      <div class="E-info">
+        <h3 style="margin-bottom:8px"><strong>Summary</strong></h3>
+        <p><strong>Biocycles</strong> (or <strong>biogeochemical cycles</strong>) are the natural pathways by which elements like water, carbon, nitrogen, phosphorus and sulfur move through ecosystems, atmosphere, soil and living organisms.</p>
+        <div class="nested">
+          <button class="E-btn" onclick="toggleSection(this)">💧 Water Cycle (Hydrologic) <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Processes:</strong> <strong>evaporation</strong>, <strong>transpiration</strong>, <strong>condensation</strong>, <strong>precipitation</strong>, <strong>infiltration</strong>, and <strong>runoff</strong>.</p>
+            <p><strong>Importance:</strong> Regulates climate, transports nutrients, and sustains freshwater resources essential for human and ecological health.</p>
+            <p><strong>Human impacts:</strong> Urbanization, deforestation and water extraction alter infiltration and runoff, increasing flood risk and reducing groundwater recharge.</p>
+          </div>
+
+          <button class="E-btn" onclick="toggleSection(this)">🌍 Carbon Cycle <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Key steps:</strong> <strong>photosynthesis</strong> (plants sequester CO₂), <strong>respiration</strong> (releases CO₂), <strong>decomposition</strong>, and <strong>fossil fuel combustion</strong> (releases stored carbon).</p>
+            <p><strong>Reservoirs:</strong> atmosphere, biomass, soils, oceans and rocks.</p>
+            <p><strong>Relevance:</strong> Human emissions from fossil fuel burning and land-use changes increase atmospheric CO₂, driving global warming and ocean acidification.</p>
+          </div>
+
+          <button class="E-btn" onclick="toggleSection(this)">🧪 Nitrogen Cycle <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Steps:</strong> <strong>nitrogen fixation</strong> (by bacteria/industrial Haber process), <strong>nitrification</strong>, <strong>assimilation</strong>, <strong>ammonification</strong>, and <strong>denitrification</strong>.</p>
+            <p><strong>Importance:</strong> Makes atmospheric N₂ available to plants as ammonia/nitrates — essential for proteins and DNA.</p>
+            <p><strong>Human impacts:</strong> Overuse of nitrogen fertilizers leads to runoff, eutrophication and harmful algal blooms in water bodies.</p>
+          </div>
+
+          <button class="E-btn" onclick="toggleSection(this)">🪨 Phosphorus Cycle <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Characteristics:</strong> Mostly a <strong>sedimentary cycle</strong> — phosphorus cycles through rocks, soil and living organisms but not the atmosphere.</p>
+            <p><strong>Importance:</strong> Critical for energy transfer (ATP), nucleic acids and cell membranes.</p>
+            <p><strong>Human impacts:</strong> Mining for phosphate rock and agricultural runoff concentrate phosphorus in waterways, causing eutrophication.</p>
+          </div>
+
+          <button class="E-btn" onclick="toggleSection(this)">🟡 Sulfur Cycle <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Sources:</strong> Volcanic emissions, mineral weathering, and microbial transformations.</p>
+            <p><strong>Role:</strong> Sulfur is used by organisms to build certain amino acids and vitamins. Industrial emissions contribute to acid rain and ecosystem stress.</p>
+          </div>
+
+          <button class="E-btn" onclick="toggleSection(this)">📚 Classifications & Dynamics <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Gaseous cycles</strong> (e.g., carbon, nitrogen, water) have large atmospheric reservoirs; <strong>sedimentary cycles</strong> (e.g., phosphorus, sulfur) are rock-dominated.</p>
+            <p><strong>Fast vs Slow:</strong> Fast cycles operate within ecosystems (days–years). Slow cycles involve geological timescales (thousands–millions of years) like carbon sequestration in rocks.</p>
+            <p><strong>Human influence:</strong> Anthropogenic activities accelerate some transfers (e.g., fossil fuel combustion) and disrupt natural balances.</p>
+          </div>
+
+          <p><strong>Why biocycles matter for environmental engineering:</strong> Engineers use biocycle knowledge to design treatment systems, restore nutrient balance, and improve resource recovery (e.g., composting, constructed wetlands).</p>
+        </div>
+      </div>
+
+      <!-- Environment -->
+      <button class="E-btn" onclick="toggleSection(this)">🌎 Environment <i class="fas chev">›</i></button>
+      <div class="E-info">
+        <h3 style="margin-bottom:8px"><strong>Summary</strong></h3>
+        <p><strong>The environment</strong> includes all <strong>biotic</strong> (living) and <strong>abiotic</strong> (non-living) components and their complex interactions. Protecting these systems ensures ecosystem services that support human life.</p>
+        <div class="nested">
+          <button class="E-btn" onclick="toggleSection(this)">🌳 Ecosystem <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Ecosystems</strong> are communities of organisms and their physical environment interacting as functional units. They provide <strong>services</strong> like food production, water purification and carbon storage.</p>
+            <div class="nested">
+              <button class="E-btn" onclick="toggleSection(this)">💡 Awareness <i class="fas chev">›</i></button>
+              <div class="E-info">
+                <p><strong>Environmental awareness</strong> drives conservation action. Education, community programs, and policy advocacy are key to improving stewardship and sustainable behavior.</p>
+                <p><strong>Examples:</strong> local recycling campaigns, watershed protection groups, and school-based sustainability curricula.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="E-btn" onclick="toggleSection(this)">🪐 Gaia Hypothesis <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Gaia Hypothesis:</strong> Proposed by James Lovelock, it posits Earth functions like a self-regulating system. While metaphorical in some respects, it emphasizes the interconnectedness of life and planetary chemistry.</p>
+          </div>
+
+          <button class="E-btn" onclick="toggleSection(this)">🔬 Ecology <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Ecology</strong> studies organisms' relationships with each other and the environment. Subfields include population ecology, community ecology, and ecosystem ecology—each informing restoration and conservation practice.</p>
+            <p><strong>Application:</strong> Ecological principles guide habitat restoration, invasive species management, and biodiversity protection.</p>
+          </div>
+
+          <button class="E-btn" onclick="toggleSection(this)">🌡️ Climate Change <i class="fas chev">›</i></button>
+          <div class="E-info">
+            <p><strong>Climate change</strong> refers to long-term shifts in temperature and weather patterns primarily caused by human-induced greenhouse gas emissions. Effects include sea-level rise, altered precipitation, and ecosystem stress.</p>
+            <p><strong>Mitigation:</strong> reducing emissions via renewable energy and efficiency. <strong>Adaptation:</strong> planning to reduce vulnerability (e.g., resilient infrastructure, flood controls).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional smaller topics expanded -->
+      <button class="E-btn" onclick="toggleSection(this)">🔬 Water & Wastewater <i class="fas chev">›</i></button>
+      <div class="E-info">
+        <p><strong>Water and wastewater engineering</strong> focuses on designing systems for safe water supply, sewage collection and treatment, and reuse. Technologies include biological treatment (activated sludge), membrane filtration, and disinfection.</p>
+      </div>
+
+      <button class="E-btn" onclick="toggleSection(this)">⚙️ Renewable Energy & Sustainability <i class="fas chev">›</i></button>
+      <div class="E-info">
+        <p><strong>Renewable energy</strong> (solar, wind, hydro, biomass) reduces reliance on fossil fuels. Environmental engineers evaluate life-cycle impacts and integrate renewables into water and waste systems for sustainable operation.</p>
+      </div>
+
+    </section>
+
+    <section id="Credits" class="content">
+      <h2>Credits</h2>
+      <p><strong>Developed by:</strong> MH Millares</p>
+      <p><strong>Instructor:</strong> Engr. Arriola</p>
+      <p><strong>Date Created:</strong> October 11, 2025</p>
+    </section>
+
+    <section id="References" class="content">
+      <h2>References</h2>
+ <button class="E-btn" onclick="toggleSection(this, 'pdf')">
+  📘 R.A. 9003 PDF <i class="fas fa-chevron-right chevron"></i>
+</button>
+
+<div id="pdf" class="E-info">
+  <a href="resources/RA9003_PRESENTATION.pdf" download class="download-link">
+    ⬇️ Download R.A. 9003 Presentation (PDF)
+  </a>
+</div>
+
+     <button class="E-btn" onclick="toggleSection(this, 'docx')">
+  ⚙️ Cycles Docx <i class="fas fa-chevron-right chevron"></i>
+</button>
+
+<div id="docx" class="E-info">
+  <a href="resources/ETC CYCLES.docx" download class="download-link">
+    ⬇️ Download Cycles (DOCX)
+  </a>
+</div>
+<br>
+      <ul>
+        <li>Mihelcic, J. & Zimmerman, J. <em>Environmental Engineering</em>.</li>
+        <li>United Nations Environment Programme (UNEP)</li>
+        <li>U.S. EPA — Climate and Waste Management resources</li>
+        <li>Open-source educational resources: OpenStax, Khan Academy</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>Info-Web Environmental Engineering — Developed by MH Millares.</footer>
+
+  <script>
+    // Navigation
+    function showContent(id, btn){
+      document.querySelectorAll('.content').forEach(c=>c.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active-btn'));
+      if(btn) btn.classList.add('active-btn');
+      // collapse all open accordions when switching sections
+      document.querySelectorAll('.E-info.open').forEach(s=>{ s.classList.remove('open'); s.style.maxHeight = null; });
+      document.querySelectorAll('.E-btn.open').forEach(b=>b.classList.remove('open'));
+    }
+
+    // Accordion toggle with sibling auto-close and ancestor resize
+    function toggleSection(btn){
+      const section = btn.nextElementSibling;
+      const parent = btn.parentElement;
+
+      // close sibling sections at same level
+      parent.querySelectorAll(':scope > .E-btn').forEach(b=>{
+        if(b !== btn){
+          b.classList.remove('open');
+          const sec = b.nextElementSibling;
+          if(sec && sec.classList.contains('E-info')){ sec.classList.remove('open'); sec.style.maxHeight = null; }
+        }
+      });
+
+      const isOpen = section.classList.contains('open');
+      if(isOpen){
+        btn.classList.remove('open');
+        section.classList.remove('open');
+        section.style.maxHeight = null;
+      } else {
+        btn.classList.add('open');
+        section.classList.add('open');
+        // set explicit height so transition works
+        section.style.maxHeight = section.scrollHeight + 'px';
+        // after expanding, update ancestor heights to fit nested content
+        setTimeout(()=>adjustAncestors(section),350);
+        // scroll into view on small screens
+        section.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    }
+
+    function adjustAncestors(el){
+      // walk up DOM and if ancestor E-info is open, update its maxHeight
+      let ancestor = el.parentElement;
+      while(ancestor){
+        if(ancestor.classList && ancestor.classList.contains('E-info') && ancestor.classList.contains('open')){
+          ancestor.style.maxHeight = ancestor.scrollHeight + 'px';
+        }
+        ancestor = ancestor.parentElement;
+      }
+    }
+
+    // ensure on load that any open sections adjust heights (none open by default)
+    window.addEventListener('resize', ()=>{
+      document.querySelectorAll('.E-info.open').forEach(s=> s.style.maxHeight = s.scrollHeight + 'px');
+    });
+  </script>
+</body>
+</html>
