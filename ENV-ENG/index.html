@@ -32,7 +32,19 @@ strong{font-weight:700}
 footer{background:#004d40;color:#e0f7fa;text-align:center;padding:12px;border-top-left-radius:12px;border-top-right-radius:12px;margin-top:18px}
 .small{font-size:.95rem;color:#0b443f}
 @media (max-width:700px){header h1{font-size:1.6rem}.logo{width:44px;height:44px}main{padding:20px}nav button{padding:10px 14px}}
-.download-link {
+.home-image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.home-image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+  
+  .download-link {
 display: inline-block;
 margin-top: 8px;
 color: #00796b;
@@ -71,7 +83,11 @@ color: #004d40;
 <main>
 <section class="content active" id="Home">
 <h2>Welcome to Environmental Engineering</h2>
-<p class="small">Explore how science, technology and systems thinking combine to protect ecosystems and human health. This site provides concise explanations and deeper dives into laws, cycles, and environmental concepts.</p>
+       <div class="home-image-container">
+    <img src="https://raw.githubusercontent.com/Michael-HM01/Project-Info/refs/heads/main/images/Image2.jpg"
+         alt="Environmental image description">
+       </div>
+  <p class="small">Explore how science, technology and systems thinking combine to protect ecosystems and human health. This site provides concise explanations and deeper dives into laws, cycles, and environmental concepts.</p>
 </section>
 <section class="content" id="Intro">
 <h2>Introduction</h2>
